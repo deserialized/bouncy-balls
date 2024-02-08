@@ -1,0 +1,8 @@
+/snap/clion/263/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/263/bin/ninja/linux/x64/ninja -G Ninja -S /media/shared/development/repositories/bouncy-balls/cmake -B /media/shared/development/repositories/bouncy-balls/cmake/cmake-build-debug
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found SDL2: /usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so  
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /media/shared/development/repositories/bouncy-balls/cmake/cmake-build-debug

@@ -1,0 +1,3 @@
+/media/shared/development/repositories/bouncy-balls/cmake/cmake-build-debug/CMakeFiles/bouncy_balls.dir
+/media/shared/development/repositories/bouncy-balls/cmake/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/shared/development/repositories/bouncy-balls/cmake/cmake-build-debug/CMakeFiles/rebuild_cache.dir
