@@ -9,6 +9,8 @@ find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
 add_executable(bouncy_balls ../src/main.cpp
+        ../resources/components/EventWindow.cpp
+        ../include/EventWindow.h
 )
 
 target_link_libraries(bouncy_balls ${SDL2_LIBRARY})
