@@ -43,7 +43,7 @@ bool InteractiveWindow::init()
  */
 SDL_Renderer* InteractiveWindow::create_renderer()
 {
-    return SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    return SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 }
 
 /* ::handle_event()
