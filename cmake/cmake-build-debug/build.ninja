@@ -56,8 +56,8 @@ build CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-b
   OBJECT_DIR = CMakeFiles/bouncy_balls.dir
   OBJECT_FILE_DIR = CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/src
 
-build CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/resources/components/ResizableWindow.cpp.o: CXX_COMPILER__bouncy_balls_unscanned_Debug /media/shared/development/repositories/bouncy-balls/resources/components/ResizableWindow.cpp || cmake_object_order_depends_target_bouncy_balls
-  DEP_FILE = CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/resources/components/ResizableWindow.cpp.o.d
+build CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/resources/components/EventWindow.cpp.o: CXX_COMPILER__bouncy_balls_unscanned_Debug /media/shared/development/repositories/bouncy-balls/resources/components/EventWindow.cpp || cmake_object_order_depends_target_bouncy_balls
+  DEP_FILE = CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/resources/components/EventWindow.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   INCLUDES = -I/usr/include/SDL2
   OBJECT_DIR = CMakeFiles/bouncy_balls.dir
@@ -71,7 +71,7 @@ build CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-b
 #############################################
 # Link the executable bouncy_balls
 
-build bouncy_balls: CXX_EXECUTABLE_LINKER__bouncy_balls_Debug CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/src/main.cpp.o CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/resources/components/ResizableWindow.cpp.o | /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
+build bouncy_balls: CXX_EXECUTABLE_LINKER__bouncy_balls_Debug CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/src/main.cpp.o CMakeFiles/bouncy_balls.dir/media/shared/development/repositories/bouncy-balls/resources/components/EventWindow.cpp.o | /usr/lib/x86_64-linux-gnu/libSDL2main.a /usr/lib/x86_64-linux-gnu/libSDL2.so
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libSDL2main.a  /usr/lib/x86_64-linux-gnu/libSDL2.so
   OBJECT_DIR = CMakeFiles/bouncy_balls.dir
