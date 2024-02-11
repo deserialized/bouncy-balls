@@ -61,6 +61,7 @@ void InteractiveWindow::handle_event(SDL_Event &event)
             minimised = false;
         }
         fullscreen = !fullscreen;
+        return;
     }
 
     // Check that the given event related to the window
@@ -120,54 +121,34 @@ void InteractiveWindow::free()
 /* ::get_renderer()
  * Returns the window's renderer
  */
-SDL_Renderer* InteractiveWindow::get_renderer()
-{
-    return renderer;
-}
+SDL_Renderer* InteractiveWindow::get_renderer() { return renderer; }
 
 /* ::set_renderer()
  * Modifies the window's renderer
  */
-void InteractiveWindow::set_renderer(SDL_Renderer* r) {
-    renderer = r;
-}
+void InteractiveWindow::set_renderer(SDL_Renderer* r) { renderer = r; }
 
 /* ::get_width()
  * Returns the window's width
  */
-int InteractiveWindow::get_width() const
-{
-    return width;
-}
+int InteractiveWindow::get_width() const { return width; }
 
 /* ::get_height()
  * Returns the window's height
  */
-int InteractiveWindow::get_height() const
-{
-    return height;
-}
+int InteractiveWindow::get_height() const { return height; }
 
 /* ::has_keyboard_focus()
  * Checks if the keyboard is focused on the window
  */
-bool InteractiveWindow::has_keyboard_focus() const
-{
-    return keyboard_focus;
-}
+bool InteractiveWindow::has_keyboard_focus() const { return keyboard_focus; }
 
 /* ::has_mouse_focus()
  * Checks if the mouse is focused on the window
  */
-bool InteractiveWindow::has_mouse_focus() const
-{
-    return mouse_focus;
-}
+bool InteractiveWindow::has_mouse_focus() const { return mouse_focus; }
 
 /* ::is_minimised()
  * Checks if the window is minimised
  */
-bool InteractiveWindow::is_minimised() const
-{
-    return minimised;
-}
+bool InteractiveWindow::is_minimised() const { return minimised; }
