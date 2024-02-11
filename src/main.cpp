@@ -56,7 +56,7 @@ int main()
 {
     // Initialise window
     if (!State.window.init()) { return 0; }
-    printf("lol");
+
     // Initialise renderer
     State.renderer = State.window.create_renderer();
     if (!State.renderer) { return 0; }
