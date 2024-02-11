@@ -23,7 +23,7 @@ bool InteractiveWindow::init()
 {
     // Extract client screen resolution
     SDL_DisplayMode mode;
-    if (SDL_GetDesktopDisplayMode(0, &mode) != 0) { return false; }
+    if (SDL_GetDesktopDisplayMode(0, &mode) == 0) { return false; }
 
     // Create and validates new window
     window = SDL_CreateWindow("Bouncy Balls", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, mode.w, mode.h, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
@@ -43,7 +43,8 @@ bool InteractiveWindow::init()
  */
 SDL_Renderer* InteractiveWindow::create_renderer()
 {
-    return SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    return renderer;
 }
 
 /* ::handle_event()
@@ -122,11 +123,6 @@ void InteractiveWindow::free()
  * Returns the window's renderer
  */
 SDL_Renderer* InteractiveWindow::get_renderer() { return renderer; }
-
-/* ::set_renderer()
- * Modifies the window's renderer
- */
-void InteractiveWindow::set_renderer(SDL_Renderer* r) { renderer = r; }
 
 /* ::get_width()
  * Returns the window's width

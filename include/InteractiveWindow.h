@@ -17,8 +17,6 @@ public:
     SDL_Renderer* create_renderer();
     // Fetch window renderer
     SDL_Renderer* get_renderer();
-    // Set the window renderer
-    void set_renderer(SDL_Renderer* r);
     // Handles window manipulation events
     void handle_event(SDL_Event& event);
     // Deallocates internals
