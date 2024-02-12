@@ -21,9 +21,11 @@ InteractiveWindow::InteractiveWindow()
  */
 bool InteractiveWindow::init()
 {
-    // Extract client screen resolution
-    SDL_DisplayMode mode;
-    if (SDL_GetDesktopDisplayMode(0, &mode) == 0) { return false; }
+    // Temporary structure to hold sample display data
+    struct {
+        int w = 400;
+        int h = 600;
+    } mode;
 
     // Create and validates new window
     window = SDL_CreateWindow("Bouncy Balls", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, mode.w, mode.h, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
