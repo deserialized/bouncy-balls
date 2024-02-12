@@ -15,7 +15,7 @@ struct {
 void render()
 {
     // Set render target
-    SDL_SetRenderTarget*(State.renderer, State.texture);
+    SDL_SetRenderTarget(State.renderer, State.texture);
 
     // Clear current display
     SDL_SetRenderDrawColor(State.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
