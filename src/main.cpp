@@ -62,7 +62,8 @@ int main()
     if (!State.renderer) { return 0; }
 
     // Initialise texture
-
+    State.texture = SDL_CreateTexture(State.renderer, SDL_PIXELTYPE(SDL_PIXELFORMAT_ARGB8888), SDL_TEXTUREACCESS_STREAMING, 100, 100);
+    if (!State.texture) { return 0; }
 
     // Run the application
     while (!State.quit) { step(); }
