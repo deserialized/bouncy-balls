@@ -14,11 +14,18 @@ struct {
  */
 void render()
 {
+    // Set render target
+    SDL_SetRenderTarget*(State.renderer, State.texture);
+
     // Clear current display
     SDL_SetRenderDrawColor(State.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
     SDL_RenderClear(State.renderer);
 
+    // Reset render target
+    SDL_SetRenderTarget(State.renderer, nullptr);
+
     // Render textures
+    SDL_RenderCopy(State.renderer, State.texture, nullptr, nullptr);  
 
     // Draw new display
     SDL_RenderPresent(State.renderer);
@@ -60,9 +67,9 @@ int main()
     // Initialise renderer
     State.renderer = State.window.create_renderer();
     if (!State.renderer) { return 0; }
-
+    
     // Initialise texture
-    State.texture = SDL_CreateTexture(State.renderer, SDL_PIXELTYPE(SDL_PIXELFORMAT_ARGB8888), SDL_TEXTUREACCESS_STREAMING, 100, 100);
+    State.texture = SDL_CreateTexture(State.renderer, SDL_PIXELTYPE(SDL_PIXELFORMAT_ARGB8888), SDL_TEXTUREACCESS_TARGET, 100, 100);
     if (!State.texture) { return 0; }
 
     // Run the application
