@@ -50,10 +50,10 @@ void step()
 {
     // Handle queued events
     SDL_Event e;
-    while (SDL_PollEvent(&e) != 0) { handle_event(e); }
+    while (SDL_PollEvent(&e) != 0) handle_event(e);
 
     // Render application
-    if (!State.window.is_minimised()) { render(); }
+    if (!State.window.is_minimised()) render();
 }
 
 /* main()
@@ -62,17 +62,17 @@ void step()
 int main()
 {
     // Initialise window
-    if (!State.window.init()) { return 0; }
+    if (!State.window.init()) return 0;
 
     // Initialise renderer
     State.renderer = State.window.create_renderer();
-    if (!State.renderer) { return 0; }
+    if (!State.renderer) return 0;
     
     // Initialise texture
     State.texture = SDL_CreateTexture(State.renderer, SDL_PIXELTYPE(SDL_PIXELFORMAT_ARGB8888), SDL_TEXTUREACCESS_TARGET, 100, 100);
 
     // Run the application
-    while (!State.quit) { step(); }
+    while (!State.quit) step();
 
     return 0;
 }
