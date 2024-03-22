@@ -29,7 +29,7 @@ bool InteractiveWindow::init()
 
     // Create and validates new window
     window = SDL_CreateWindow("Bouncy Balls", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, mode.w, mode.h, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
-    if (window == nullptr) { return false; }
+    if (window == nullptr) return false;
 
     // Initialise properties
     mouse_focus = true;
@@ -56,9 +56,7 @@ void InteractiveWindow::handle_event(SDL_Event &event)
 {
     // Toggle fullscreen event
     if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_RETURN) {
-        if (fullscreen) {
-            SDL_SetWindowFullscreen(window, 0);
-        }
+        if (fullscreen) SDL_SetWindowFullscreen(window, 0);
         else {
             SDL_SetWindowFullscreen(window, 1);
             minimised = false;
@@ -68,7 +66,7 @@ void InteractiveWindow::handle_event(SDL_Event &event)
     }
 
     // Check that the given event related to the window
-    if (event.type != SDL_WINDOWEVENT ) { return; }
+    if (event.type != SDL_WINDOWEVENT ) return;
 
     // Handle different window events
     switch(event.window.event)
